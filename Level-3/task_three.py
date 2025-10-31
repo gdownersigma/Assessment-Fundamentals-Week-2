@@ -113,6 +113,7 @@ class PresentationAssessment(Assessment):
 
 
 class Question:
+    """Blueprint for question class."""
 
     def __init__(self, question: str, chosen_answer: str, correct_answer: str):
         self.question = question
@@ -166,5 +167,3 @@ if __name__ == "__main__":
         Question("What is 5 + 5? A:10 B:4 C:5 D:8", "A", "A"),
     ]
     quiz = Quiz(questions, "Maths Quiz", "multiple-choice")
-
-    # Add an implementation for the Marking class below to test your code
