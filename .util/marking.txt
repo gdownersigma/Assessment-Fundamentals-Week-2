@@ -1,10 +1,10 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.12.12, pytest-8.4.2, pluggy-1.6.0
+platform linux -- Python 3.12.11, pytest-8.4.2, pluggy-1.6.0
 rootdir: /home/runner/work/Assessment-Fundamentals-Week-2/Assessment-Fundamentals-Week-2
 collected 16 items / 1 error
 
 !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-=============================== 1 error in 0.11s ===============================
+=============================== 1 error in 0.10s ===============================
 ************* Module task_one
 Level-1/task_one.py:8:34: W0622: Redefining built-in 'type' (redefined-builtin)
 Level-1/task_one.py:5:0: R0903: Too few public methods (0/2) (too-few-public-methods)
@@ -12,9 +12,11 @@ Level-1/task_one.py:5:0: R0903: Too few public methods (0/2) (too-few-public-met
 Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-2/task_two.py:17:4: C0116: Missing function or method docstring (missing-function-docstring)
 Level-2/task_two.py:4:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-Level-2/task_two.py:53:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-Level-2/task_two.py:62:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-Level-2/task_two.py:71:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:52:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:52:37: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:67:4: E0306: __repr__ does not return str (invalid-repr-returned)
+Level-2/task_two.py:82:4: E0306: __repr__ does not return str (invalid-repr-returned)
+Level-2/task_two.py:97:4: E0306: __repr__ does not return str (invalid-repr-returned)
 ************* Module task_three
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-3/task_three.py:17:0: C0115: Missing class docstring (missing-class-docstring)
@@ -28,5 +30,5 @@ Level-3/task_three.py:35:23: W0621: Redefining name 'quiz' from outer scope (lin
 Level-3/task_three.py:33:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 
 ------------------------------------------------------------------
-Your code has been rated at 8.20/10 (previous run: 8.20/10, +0.00)
+Your code has been rated at 7.19/10 (previous run: 7.19/10, +0.00)
 
