@@ -50,7 +50,19 @@ class Trainee:
         return None
 
     def get_assessment_of_type(self, type: str) -> list[Assessment]:
-        pass
+        """Method to return all assessments of a given type the trainee has."""
+
+        if type.lower() not in ["multiple-choice", "technical", "presentation"]:
+            raise ValueError(
+                "Type must be 'multiple-choice', 'technical' or 'presentation'.")
+
+        assessments_of_type = []
+        for assessment in self.assessments:
+            print(type)
+            print(assessment.__str__())
+            if type in assessment.__str__():
+                assessments_of_type.append(assessment)
+        return assessments_of_type
 
 
 class MultipleChoiceAssessment(Assessment):
@@ -62,7 +74,7 @@ class MultipleChoiceAssessment(Assessment):
         self.weight = 0.7
 
     def __str__(self):
-        return f"<Multiple Choice Assessment: {self.name}>"
+        return f"<multiple-choice Assessment: {self.name}>"
 
     def __repr__(self):
         return self.__str__
@@ -77,7 +89,7 @@ class TechnicalAssessment(Assessment):
         self.weight = 1
 
     def __str__(self):
-        return f"<Technical Assessment: {self.name}>"
+        return f"<technical Assessment: {self.name}>"
 
     def __repr__(self):
         return self.__str__
@@ -92,7 +104,7 @@ class PresentationAssessment(Assessment):
         self.weight = 0.6
 
     def __str__(self):
-        return f"<Presentation Assessment: {self.name}>"
+        return f"<presentation Assessment: {self.name}>"
 
     def __repr__(self):
         return self.__str__
