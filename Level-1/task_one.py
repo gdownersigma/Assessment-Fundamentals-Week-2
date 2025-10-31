@@ -1,5 +1,6 @@
 """Level 1 of the assessment."""
 from datetime import date
+# pylint: disable=too-few-public-methods
 
 
 class Assessment:

@@ -1,6 +1,8 @@
 """Level 3 of the assessment."""
 from datetime import date
 
+# pylint: disable=too-few-public-methods
+
 
 class Assessment:
     """Blueprint for an Assessment class."""
