@@ -12,11 +12,12 @@ Level-1/task_one.py:5:0: R0903: Too few public methods (0/2) (too-few-public-met
 Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-2/task_two.py:17:4: C0116: Missing function or method docstring (missing-function-docstring)
 Level-2/task_two.py:4:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-Level-2/task_two.py:52:4: C0116: Missing function or method docstring (missing-function-docstring)
 Level-2/task_two.py:52:37: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-2/task_two.py:67:4: E0306: __repr__ does not return str (invalid-repr-returned)
-Level-2/task_two.py:82:4: E0306: __repr__ does not return str (invalid-repr-returned)
-Level-2/task_two.py:97:4: E0306: __repr__ does not return str (invalid-repr-returned)
+Level-2/task_two.py:62:18: C2801: Unnecessarily calls dunder method __str__. Use str built-in function. (unnecessary-dunder-call)
+Level-2/task_two.py:63:23: C2801: Unnecessarily calls dunder method __str__. Use str built-in function. (unnecessary-dunder-call)
+Level-2/task_two.py:79:4: E0306: __repr__ does not return str (invalid-repr-returned)
+Level-2/task_two.py:94:4: E0306: __repr__ does not return str (invalid-repr-returned)
+Level-2/task_two.py:109:4: E0306: __repr__ does not return str (invalid-repr-returned)
 ************* Module task_three
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-3/task_three.py:17:0: C0115: Missing class docstring (missing-class-docstring)
@@ -30,5 +31,5 @@ Level-3/task_three.py:35:23: W0621: Redefining name 'quiz' from outer scope (lin
 Level-3/task_three.py:33:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 
 ------------------------------------------------------------------
-Your code has been rated at 7.19/10 (previous run: 7.19/10, +0.00)
+Your code has been rated at 7.30/10 (previous run: 7.30/10, +0.00)
 
