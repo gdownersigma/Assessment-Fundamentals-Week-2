@@ -4,23 +4,24 @@ rootdir: /home/runner/work/Assessment-Fundamentals-Week-2/Assessment-Fundamental
 collected 16 items / 1 error
 
 !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-=============================== 1 error in 0.10s ===============================
+=============================== 1 error in 0.11s ===============================
 ************* Module task_one
 Level-1/task_one.py:8:34: W0622: Redefining built-in 'type' (redefined-builtin)
 Level-1/task_one.py:5:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 ************* Module task_two
 Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-2/task_two.py:7:34: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-2/task_two.py:4:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-2/task_two.py:52:4: W0107: Unnecessary pass statement (unnecessary-pass)
-Level-2/task_two.py:50:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-2/task_two.py:57:4: W0107: Unnecessary pass statement (unnecessary-pass)
-Level-2/task_two.py:55:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-2/task_two.py:62:4: W0107: Unnecessary pass statement (unnecessary-pass)
-Level-2/task_two.py:60:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-2/task_two.py:69:27: E1120: No value for argument 'score' in constructor call (no-value-for-parameter)
-Level-2/task_two.py:71:27: E1120: No value for argument 'score' in constructor call (no-value-for-parameter)
+Level-2/task_two.py:21:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:4:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:56:4: W0107: Unnecessary pass statement (unnecessary-pass)
+Level-2/task_two.py:54:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:61:4: W0107: Unnecessary pass statement (unnecessary-pass)
+Level-2/task_two.py:59:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:66:4: W0107: Unnecessary pass statement (unnecessary-pass)
+Level-2/task_two.py:64:0: R0903: Too few public methods (1/2) (too-few-public-methods)
 Level-2/task_two.py:73:27: E1120: No value for argument 'score' in constructor call (no-value-for-parameter)
+Level-2/task_two.py:75:27: E1120: No value for argument 'score' in constructor call (no-value-for-parameter)
+Level-2/task_two.py:77:27: E1120: No value for argument 'score' in constructor call (no-value-for-parameter)
 ************* Module task_three
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-3/task_three.py:17:0: C0115: Missing class docstring (missing-class-docstring)
@@ -34,5 +35,5 @@ Level-3/task_three.py:35:23: W0621: Redefining name 'quiz' from outer scope (lin
 Level-3/task_three.py:33:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 
 ------------------------------------------------------------------
-Your code has been rated at 6.09/10 (previous run: 6.09/10, +0.00)
+Your code has been rated at 6.11/10 (previous run: 6.11/10, +0.00)
 
