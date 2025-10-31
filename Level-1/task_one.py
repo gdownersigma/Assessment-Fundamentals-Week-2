@@ -1,5 +1,17 @@
+"""Level 1 of the assessment"""
 from datetime import date
 
+
+class Assessment:
+    """Blueprint for an Assessment class"""
+
+    def __init__(self, name: str, type: str, score: float):
+        # validators
+        if type not in ["multiple-choice", "technical", "presentation"]:
+            raise ValueError(
+                "Type must be 'multiple-choice', 'technical' or 'presentation'.")
+        if not 0 <= score <= 100:
+            raise ValueError("Score must be in range 0-100.")
 
 
 if __name__ == "__main__":
