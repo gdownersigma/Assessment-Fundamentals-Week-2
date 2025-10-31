@@ -121,17 +121,31 @@ class Question:
 
 
 class Quiz:
+    """Blueprint for the quiz class."""
 
     def __init__(self, questions: list, name: str, type: str):
+        """Constructor for the quiz class."""
         self.questions = questions
         self.name = name
         self.type = type
 
 
 class Marking:
+    """Blueprint for the marking class."""
 
     def __init__(self, quiz: Quiz) -> None:
-        pass
+        """Constructor for the marking class."""
+        self._quiz = quiz
+
+    def mark(self) -> int:
+        """Method to mark a quiz and return a score."""
+        if len(self._quiz.questions) == 0:
+            return 0
+        score = 0
+        for question in self._quiz.questions:
+            if question.chosen_answer == question.correct_answer:
+                score += 1
+        return round(number=score*100/len(self._quiz.questions))
 
 
 if __name__ == "__main__":
