@@ -35,6 +35,10 @@ class Trainee:
             ((date.today().month, date.today().day) <
              (self.date_of_birth.month, self.date_of_birth.day))
 
+    def add_assessment(self, assessment: Assessment) -> None:
+        """Method to add an assessment to a trainees list of assessments."""
+        self.assessments.append(assessment)
+
 
 if __name__ == "__main__":
     trainee = Trainee("Sigma", "trainee@sigmalabs.co.uk", date(1990, 1, 1))
