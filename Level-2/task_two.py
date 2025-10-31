@@ -49,6 +49,9 @@ class Trainee:
 
         return None
 
+    def get_assessment_of_type(self, type: str) -> list[Assessment]:
+        pass
+
 
 class MultipleChoiceAssessment(Assessment):
     """Blueprint for a multiple choice type of assessment."""
@@ -57,6 +60,12 @@ class MultipleChoiceAssessment(Assessment):
         """Constructor method for multiple choice assessment."""
         super().__init__(name, score)
         self.weight = 0.7
+
+    def __str__(self):
+        return f"<Multiple Choice Assessment: {self.name}>"
+
+    def __repr__(self):
+        return self.__str__
 
 
 class TechnicalAssessment(Assessment):
@@ -67,6 +76,12 @@ class TechnicalAssessment(Assessment):
         super().__init__(name, score)
         self.weight = 1
 
+    def __str__(self):
+        return f"<Technical Assessment: {self.name}>"
+
+    def __repr__(self):
+        return self.__str__
+
 
 class PresentationAssessment(Assessment):
     """Blueprint for a presentation type of assessment."""
@@ -75,6 +90,12 @@ class PresentationAssessment(Assessment):
         """Constructor method for presentation assessment."""
         super().__init__(name, score)
         self.weight = 0.6
+
+    def __str__(self):
+        return f"<Presentation Assessment: {self.name}>"
+
+    def __repr__(self):
+        return self.__str__
 
 
 if __name__ == "__main__":
