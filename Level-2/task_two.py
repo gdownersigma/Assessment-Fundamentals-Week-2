@@ -1,3 +1,4 @@
+"""Level-2 of the assessment."""
 from datetime import date
 
 
@@ -15,6 +16,7 @@ class Assessment:
         self.weight = 0
 
     def calculate_score(self):
+        """Method to return the calculated score."""
         return self.score * self.weight
 
 
@@ -77,7 +79,7 @@ class MultipleChoiceAssessment(Assessment):
         return f"<multiple-choice Assessment: {self.name}>"
 
     def __repr__(self):
-        return self.__str__
+        return self.__str__()
 
 
 class TechnicalAssessment(Assessment):
@@ -92,7 +94,7 @@ class TechnicalAssessment(Assessment):
         return f"<technical Assessment: {self.name}>"
 
     def __repr__(self):
-        return self.__str__
+        return self.__str__()
 
 
 class PresentationAssessment(Assessment):
@@ -107,7 +109,7 @@ class PresentationAssessment(Assessment):
         return f"<presentation Assessment: {self.name}>"
 
     def __repr__(self):
-        return self.__str__
+        return self.__str__()
 
 
 if __name__ == "__main__":
