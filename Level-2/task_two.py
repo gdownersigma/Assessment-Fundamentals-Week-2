@@ -4,17 +4,13 @@ from datetime import date
 class Assessment:
     """Blueprint for an Assessment class."""
 
-    def __init__(self, name: str, type: str, score: float):
+    def __init__(self, name: str, score: float):
         """Constructor for Assessment class."""
         # validators
-        if type not in ["multiple-choice", "technical", "presentation"]:
-            raise ValueError(
-                "Type must be 'multiple-choice', 'technical' or 'presentation'.")
         if not 0 <= score <= 100:
             raise ValueError("Score must be in range 0-100.")
 
         self.name = name
-        self.type = type
         self.score = score
         self.weight = 0
 
@@ -53,17 +49,29 @@ class Trainee:
 
 class MultipleChoiceAssessment(Assessment):
     """Blueprint for a multiple choice type of assessment."""
-    pass
+
+    def __init__(self, name: str, score: float):
+        """Constructor method for multiple choice assessment."""
+        super().__init__(name, score)
+        self.weight = 0.7
 
 
 class TechnicalAssessment(Assessment):
     """Blueprint for a technical type of assessment."""
-    pass
+
+    def __init__(self, name: str, score: float):
+        """Constructor method for technical assessment."""
+        super().__init__(name, score)
+        self.weight = 1
 
 
 class PresentationAssessment(Assessment):
     """Blueprint for a presentation type of assessment."""
-    pass
+
+    def __init__(self, name: str, score: float):
+        """Constructor method for presentation assessment."""
+        super().__init__(name, score)
+        self.weight = 0.6
 
 
 if __name__ == "__main__":
