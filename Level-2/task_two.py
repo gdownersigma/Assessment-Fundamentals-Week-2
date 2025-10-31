@@ -36,6 +36,9 @@ class Trainee:
 
     def add_assessment(self, assessment: Assessment) -> None:
         """Method to add an assessment to a trainees list of assessments."""
+        if not isinstance(assessment, Assessment):
+            raise TypeError(
+                "An assessment should be a subclass of Assessment.")
         self.assessments.append(assessment)
 
     def get_assessment(self, name: str):
