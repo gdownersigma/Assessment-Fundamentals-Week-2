@@ -147,6 +147,14 @@ class Marking:
                 score += 1
         return round(number=score*100/len(self._quiz.questions))
 
+    def generate_assessment(self) -> Assessment:
+        """Method to generate an assessment from a quiz."""
+        if self._quiz.type == 'technical':
+            return TechnicalAssessment(self._quiz.name, self.mark())
+        if self._quiz.type == 'multiple-choice':
+            return MultipleChoiceAssessment(self._quiz.name, self.mark())
+        return PresentationAssessment(self._quiz.name, self.mark())
+
 
 if __name__ == "__main__":
     # Example questions and quiz
