@@ -51,18 +51,18 @@ class Trainee:
 
         return None
 
-    def get_assessment_of_type(self, type: str) -> list[Assessment]:
+    def get_assessment_of_type(self, given_type: str) -> list[Assessment]:
         """Method to return all assessments of a given type the trainee has."""
 
-        if type.lower() not in ["multiple-choice", "technical", "presentation"]:
+        if given_type.lower() not in ["multiple-choice", "technical", "presentation"]:
             raise ValueError(
                 "Type must be 'multiple-choice', 'technical' or 'presentation'.")
 
         assessments_of_type = []
         for assessment in self.assessments:
-            print(type)
+            print(given_type)
             print(assessment.__str__())
-            if type in assessment.__str__():
+            if given_type in assessment.__str__():
                 assessments_of_type.append(assessment)
         return assessments_of_type
 

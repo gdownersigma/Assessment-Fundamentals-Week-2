@@ -51,18 +51,18 @@ class Trainee:
 
         return None
 
-    def get_assessment_of_type(self, type: str) -> list[Assessment]:
+    def get_assessment_of_type(self, assessment_type: str) -> list[Assessment]:
         """Method to return all assessments of a given type the trainee has."""
 
-        if type.lower() not in ["multiple-choice", "technical", "presentation"]:
+        if assessment_type.lower() not in ["multiple-choice", "technical", "presentation"]:
             raise ValueError(
                 "Type must be 'multiple-choice', 'technical' or 'presentation'.")
 
         assessments_of_type = []
         for assessment in self.assessments:
-            print(type)
+            print(assessment_type)
             print(assessment.__str__())
-            if type in assessment.__str__():
+            if assessment_type in assessment.__str__():
                 assessments_of_type.append(assessment)
         return assessments_of_type
 
@@ -124,19 +124,19 @@ class Question:
 class Quiz:
     """Blueprint for the quiz class."""
 
-    def __init__(self, questions: list, name: str, type: str):
+    def __init__(self, given_questions: list, name: str, assessment_type: str):
         """Constructor for the quiz class."""
-        self.questions = questions
+        self.questions = given_questions
         self.name = name
-        self.type = type
+        self.assessment_type = assessment_type
 
 
 class Marking:
     """Blueprint for the marking class."""
 
-    def __init__(self, quiz: Quiz) -> None:
+    def __init__(self, given_quiz: Quiz) -> None:
         """Constructor for the marking class."""
-        self._quiz = quiz
+        self._quiz = given_quiz
 
     def mark(self) -> int:
         """Method to mark a quiz and return a score."""
@@ -150,9 +150,9 @@ class Marking:
 
     def generate_assessment(self) -> Assessment:
         """Method to generate an assessment from a quiz."""
-        if self._quiz.type == 'technical':
+        if self._quiz.assessment_type == 'technical':
             return TechnicalAssessment(self._quiz.name, self.mark())
-        if self._quiz.type == 'multiple-choice':
+        if self._quiz.assessment_type == 'multiple-choice':
             return MultipleChoiceAssessment(self._quiz.name, self.mark())
         return PresentationAssessment(self._quiz.name, self.mark())
 
