@@ -47,6 +47,21 @@ class Trainee:
         return None
 
 
+class MultipleChoiceAssessment(Assessment):
+    """Blueprint for a multiple choice type of assessment."""
+    pass
+
+
+class TechnicalAssessment(Assessment):
+    """Blueprint for a technical type of assessment."""
+    pass
+
+
+class PresentationAssessment(Assessment):
+    """Blueprint for a presentation type of assessment."""
+    pass
+
+
 if __name__ == "__main__":
     trainee = Trainee("Sigma", "trainee@sigmalabs.co.uk", date(1990, 1, 1))
     print(trainee)
