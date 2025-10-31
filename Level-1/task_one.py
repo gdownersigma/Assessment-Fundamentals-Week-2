@@ -39,6 +39,14 @@ class Trainee:
         """Method to add an assessment to a trainees list of assessments."""
         self.assessments.append(assessment)
 
+    def get_assessment(self, name: str):
+        """Method to return an assessment if found, if not return None."""
+        for assessment in self.assessments:
+            if assessment.name == name:
+                return assessment
+
+        return None
+
 
 if __name__ == "__main__":
     trainee = Trainee("Sigma", "trainee@sigmalabs.co.uk", date(1990, 1, 1))
