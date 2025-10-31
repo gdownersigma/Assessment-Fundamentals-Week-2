@@ -16,6 +16,10 @@ class Assessment:
         self.name = name
         self.type = type
         self.score = score
+        self.weight = 0
+
+    def calculate_score(self):
+        return self.score * self.weight
 
 
 class Trainee:
