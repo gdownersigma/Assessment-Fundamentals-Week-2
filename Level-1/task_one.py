@@ -1,17 +1,39 @@
-"""Level 1 of the assessment"""
+"""Level 1 of the assessment."""
 from datetime import date
 
 
 class Assessment:
-    """Blueprint for an Assessment class"""
+    """Blueprint for an Assessment class."""
 
     def __init__(self, name: str, type: str, score: float):
+        """Constructor for Assessment class."""
         # validators
         if type not in ["multiple-choice", "technical", "presentation"]:
             raise ValueError(
                 "Type must be 'multiple-choice', 'technical' or 'presentation'.")
         if not 0 <= score <= 100:
             raise ValueError("Score must be in range 0-100.")
+
+        self.name = name
+        self.type = type
+        self.score = score
+
+
+class Trainee:
+    """Blueprint for the Trainee class."""
+
+    def __init__(self, name: str, email: str, date_of_birth: date,):
+        """Constructor for Trainee class."""
+        self.name = name
+        self.email = email
+        self.date_of_birth = date_of_birth
+        self.assessments = []
+
+    def get_age(self) -> int:
+        """Method to return the age of this trainee."""
+        return date.today().year - self.date_of_birth.year - \
+            ((date.today().month, date.today().day) <
+             (self.date_of_birth.month, self.date_of_birth.day))
 
 
 if __name__ == "__main__":
